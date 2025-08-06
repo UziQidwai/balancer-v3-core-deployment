@@ -118,3 +118,41 @@ npx hardhat run scripts/verify-gyro-factories.js --network sepolia
 This repository contains a **complete, standalone Balancer V3 fork** with 100% verified contracts on Sepolia testnet.
 
 **Last Updated**: Successfully completed full deployment - August 6, 2025
+
+## 🏭 Phase 3: Advanced Factory Contracts Added
+
+**Advanced Factory Contracts (4 contracts):**
+- **BoostedPoolFactory** - 100% Boosted Pools with ERC4626 yield optimization: `0xBaE1CB5aD329A054611Bd821A6EAC260c45D75f6`
+- **StableV2PoolFactory** - Enhanced stable pools with improved math: `0xB76f3FDF04bBDf7e4f022128a14668A8b220e324`
+- **QuantumAMMFactory** - Advanced AMM with quantum-enhanced pricing: `0x2753694A239BDf86765dC10bea42553357237F08`
+- **ReclamFactory** - Yield reclaim pools with automatic harvesting: `0xf7F0AA998AB8c5fd35E24b985Ad2eFe7Bd1fA897`
+
+## 📝 Complete Deployment Sequence (Updated)
+Phase 1: Core Contracts (4 contracts)
+npx hardhat run scripts/deploy-vault-with-precalculation.js --network sepolia
+
+Phase 2: Router Contracts (4 contracts)
+npx hardhat run scripts/deploy-phase1-routers.js --network sepolia
+
+Phase 3: Basic Factory Contracts (4 contracts)
+npx hardhat run scripts/deploy-phase2-factories.js --network sepolia
+
+Phase 4: Advanced Factory Contracts (4 contracts)
+npx hardhat run scripts/deploy-phase3-advanced-factories.js --network sepolia
+
+Phase 5: Verification (if needed)
+npx hardhat run scripts/verify-gyro-factories.js --network sepolia
+
+text
+
+## 🏆 Complete Success Results (Sepolia) - 16 Contracts Total
+
+**All 16 contracts successfully deployed and verified:**
+
+**Advanced Factory Contracts:**
+- **BoostedPoolFactory**: `0xBaE1CB5aD329A054611Bd821A6EAC260c45D75f6` ✅ Verified
+- **StableV2PoolFactory**: `0xB76f3FDF04bBDf7e4f022128a14668A8b220e324` ✅ Verified
+- **QuantumAMMFactory**: `0x2753694A239BDf86765dC10bea42553357237F08` ✅ Verified
+- **ReclamFactory**: `0xf7F0AA998AB8c5fd35E24b985Ad2eFe7Bd1fA897` ✅ Verified
+
+**Last Updated**: Phase 3 Advanced Factories completed - August 6, 2025
