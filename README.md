@@ -64,3 +64,57 @@ text
 ## 📝 Last Updated
 
 Successfully deployed: August 6, 2025
+
+## 🏭 Factory Contracts Added
+
+**Phase 2 Factory Contracts:**
+- WeightedPoolFactory - Creates standard weighted pools
+- StablePoolFactory - Creates low-slippage stable asset pools  
+- GyroECLPPoolFactory - Creates Gyroscope elliptic concentrated liquidity pools
+- Gyro2CLPPoolFactory - Creates Gyroscope two-token concentrated liquidity pools
+
+**Supporting Infrastructure:**
+- BasePoolFactory.sol - Base contract for all pool factories
+- IVault.sol - Vault interface required by factories
+
+## 📝 Complete Deployment Sequence
+
+Phase 1: Core Contracts (4 contracts)
+npx hardhat run scripts/deploy-vault-with-precalculation.js --network sepolia
+
+Phase 2: Router Contracts (4 contracts)
+npx hardhat run scripts/deploy-phase1-routers.js --network sepolia
+
+Phase 3: Factory Contracts (4 contracts)
+npx hardhat run scripts/deploy-phase2-factories.js --network sepolia
+
+Phase 4: Verify Gyro Factories (if needed)
+npx hardhat run scripts/verify-gyro-factories.js --network sepolia
+
+## 🎯 Complete Success Results (Sepolia)
+
+**All 12 contracts successfully deployed and verified:**
+
+**Core Contracts:**
+- VaultAdmin: `0x16F3A1D447C42711b4B91c9F593cA060ea0F8a64`
+- VaultExtension: `0xA727f17Ca785372cf73cf4bFFd96836888CE5542`
+- ProtocolFeeController: `0xc3755174DB2Ff556B4910750Be14Ad6C3F8E40fb`
+- Vault: `0xcdB7445d555258D3cAADAea6Ee2d6D946fC41F0e`
+
+**Router Contracts:**
+- Router: `0xc8faaBAcbf5f3c5Da7395C053a5AD00A7CB48471`
+- BatchRouter: `0x129Ca0F4E29F41027128c21541A135D9CAC8beB8`
+- BufferRouter: `0xcc6ac08743C736c8239D39D95DC4091E74F23857`
+- CompositeLiquidityRouter: `0x6Bd8b87e02f1e1d98e9cb8B07e260ebE0Dd10624`
+
+**Factory Contracts:**
+- WeightedPoolFactory: `0x4a1289e09c85ED049A2A7E0c102DbE701350608F`
+- StablePoolFactory: `0xfBcA5987CD1B5f7f859D38D61bdCE649b68357A0`
+- GyroECLPPoolFactory: `0xA71cdcD5e4FeCed0d1CF9977295A9C8A78519C71`
+- Gyro2CLPPoolFactory: `0x997Fedbc9A284da647f6068724926C3e9F6540E0`
+
+## 🏆 Achievement
+
+This repository contains a **complete, standalone Balancer V3 fork** with 100% verified contracts on Sepolia testnet.
+
+**Last Updated**: Successfully completed full deployment - August 6, 2025
